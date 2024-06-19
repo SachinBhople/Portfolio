@@ -10,6 +10,7 @@ const app = express()
 
 app.use(express.static(path.join(__dirname, "dist")))
 app.use(express.json())
+// app.use(cors())
 app.use(cors())
 app.use("/api/admin", require("./routes/userRoutes"))
 app.use("/api/admin/project", require("./routes/adminRoutes"))
